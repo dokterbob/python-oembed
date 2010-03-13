@@ -60,11 +60,15 @@ import urllib2
 import logging
 import re
 import simplejson
-import xml.etree.ElementTree as etree
 
+try:
+    from xml.etree import cElementTree as etree
+except ImportError:
+    # Running Python < 2.4 so we need a different import
+    import cElementTree as etree
 
-__author__ = 'abarmat@gmail.com'
-__version__ = '0.1.2'
+__author__ = 'drbob@dokterbob.net'
+__version__ = '0.2'
 
 class OEmbedError(Exception):
     '''Base class for OEmbed errors'''
