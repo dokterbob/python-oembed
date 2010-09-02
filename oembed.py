@@ -598,7 +598,8 @@ DefaultOEmbedConsumer.addEndpoint(
 
 DefaultOEmbedConsumer.addEndpoint(
     OEmbedEndpoint('http://www.vimeo.com/api/oembed.{format}', 
-                   ['http://www.vimeo.com/*',                                                       
+                   ['http://www.vimeo.com/*',
+                    'http://vimeo.com/*',                                                 
                     'http://www.vimeo.com/groups/*/*']))
                     
 DefaultOEmbedConsumer.addEndpoint(
