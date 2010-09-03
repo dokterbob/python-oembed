@@ -544,7 +544,7 @@ class OEmbedConsumer(object):
         if endpoint is None:
             logging.debug('No endpoint found for %s, attempting auto-discovery.' % url)
             
-            return OEmbedAutoDiscovery().get(url)
+            return OEmbedAutoDiscovery().get(url, **opt)
             
             raise OEmbedNoEndpoint('There are no endpoints available for \'%s\' and autodiscovery failed.'\
                                    % url)        
